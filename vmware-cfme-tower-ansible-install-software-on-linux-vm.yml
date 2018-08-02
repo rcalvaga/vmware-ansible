@@ -1,0 +1,14 @@
+- name: Install Software on Vmware Linux VM
+  hosts: all
+  gather_facts: True
+
+  tasks:
+  - name: install "{{ software }}"
+    yum:
+      name: "{{ software }}"
+      state: latest
+  - name: start "{{ software }}" Service
+    service:
+      name: "{{ software }}"
+      state: started
+      enabled: yes
