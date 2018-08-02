@@ -1,0 +1,8 @@
+- name: Install Software on Vmware Linux VM
+  hosts: all
+  gather_facts: True
+  
+  roles:
+   - common
+   - jboss-standalone
+   - java-app
