@@ -3,10 +3,15 @@
   gather_facts: True
 
   tasks:
+  
+  - name: Clean Yum Metadata
+    command: yum clean all
+    
   - name: install "{{ software }}"
     yum:
       name: "{{ software }}"
       state: latest
+      
   - name: start "{{ software }}" Service
     service:
       name: "{{ software }}"
