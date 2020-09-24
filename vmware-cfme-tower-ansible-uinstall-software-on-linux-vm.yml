@@ -1,0 +1,17 @@
+- name: Uninstall Software on Vmware Linux VM
+  hosts: all
+  gather_facts: False
+
+  tasks:
+  
+  - name: Stop "{{ software }}" Service
+    service:
+      name: "{{ software }}"
+      state: stopped
+      enabled: yes
+    
+  - name: install "{{ software }}"
+    yum:
+      name: "{{ software }}"
+      state: absent
+      
