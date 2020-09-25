@@ -1,6 +1,6 @@
 - name: Install Software on Vmware Linux VM
   hosts: all
-  gather_facts: True
+  gather_facts: False
 
   tasks:
   
