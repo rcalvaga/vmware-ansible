@@ -7,12 +7,12 @@
   - name: Clean Yum Metadata
     command: yum clean all
     
-  - name: install "{{ software }}"
+  - name: Install "{{ software }}"
     yum:
       name: "{{ software }}"
       state: latest
       
-  - name: start "{{ software }}" Service
+  - name: Start "{{ software }}" Service
     service:
       name: "{{ software }}"
       state: started
