@@ -3,7 +3,7 @@
   gather_facts: False
 
   tasks:
-  - name: start "{{ software }}" Service
+  - name: Restart "{{ software }}" Service
     service:
       name: "{{ software }}"
       state: restarted
