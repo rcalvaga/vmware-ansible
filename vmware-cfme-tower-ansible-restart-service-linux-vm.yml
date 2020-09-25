@@ -1,0 +1,10 @@
+- name: Restart Service Linux
+  hosts: all
+  gather_facts: False
+
+  tasks:
+  - name: start "{{ software }}" Service
+    service:
+      name: "{{ software }}"
+      state: restarted
+      enabled: yes
