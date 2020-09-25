@@ -10,7 +10,7 @@
       state: stopped
       enabled: yes
     
-  - name: install "{{ software }}"
+  - name: Uninstall "{{ software }}"
     yum:
       name: "{{ software }}"
       state: absent
